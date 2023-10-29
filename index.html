@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <script src="js/calculator.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="page-container">
+        <div class="settings">
+            <i class="fa fa-solid fa-gear"></i>
+        </div>
+        <div class="calc-wrapper">
+            <div class="display ripple">
+                <div class="operation"></div>
+                <span class="sym">=</span><span class="result"></span>
+            </div>
+            <div class="hr"></div>
+            <div class="keyboard r">
+                <div class="actions r"></div>
+                <div class="numbers r"></div>
+                <div class="operations r"></div>
+                <div class="symbols"></div>
+            </div>
+        </div>
+        <div class="modal-container">
+            <div class="modal">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                </div>
+                <h2>Settings</h2>
+                <div class="modal-body">
+                    <div class="section">
+                        <label for="dark">Dark</label>
+                        <label class="switch">
+              <input checked type="checkbox" id="dark">
+              <span class="slider round"></span>
+            </label>
+                    </div>
+                    <div class="section">
+                        <label for="color">Color</label>
+                        <select id="color">
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="tealGreen" selected>Teal Green</option>
+                <option value="grey">Grey</option>
+                <option value="fandango">Fandango</option>
+                <option value="floral">Floral</option>
+                <option value="indigo">Indigo</option>
+                <option value="magenta">Magenta</option>
+                <option value="orange">Orange</option>
+                <option value="pink">Pink</option>
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+            </select>
+                    </div>
+                    <div class="section">
+                        <label for="vibrate">Vibration</label>
+                        <!--
+            <select id="vibrateo">
+                <option value="0">0ms</option>
+                <option value="15">15ms</option>
+                <option value="30">30ms</option>
+                <option value="60">60ms</option>
+                <option value="90">90ms</option>
+            </select>
+            -->
+                        <input value="0" step='5' min="0" max="100" type="range" id="vibrate">
+                        <span class="output">0ms</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
