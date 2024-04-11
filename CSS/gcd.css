@@ -5,6 +5,7 @@ body {
     height:fill-content;
     position:relative;
     padding:0 0 70px 0;
+    font-family: 'Poppins', sans-serif;
 }
 *{
     box-sizing:border-box;
