@@ -1,1 +1,216 @@
+body {
+    margin:0;
+    background-color:#66c;
+    color:#fff;
+    height:fill-content;
+    position:relative;
+    padding:0 0 70px 0;
+}
+*{
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+.gcd{
+    font-size:100px!important;
+    animation:result 0.4s 1 forwards;
+}
+.container{
+    height:100%;
+}
+.display{
+    width:100vw;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:10px 0 0 0;
+}
+.details{
+    text-align:center;
+    padding:0 0 20px 0;
+}
+.error{
+    color:#f66;
+    font-size:30px;
+    font-weight:800;
+}
+form, .inputs-container{
+    width: 100%;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+}
+form{
+    padding:50px 0 0px 0;
+}
+header{
+    --pos:translateY(-100%);
+    box-shadow:5px 5px 5px #0003;
+    padding:10px;
+    background-color:#333;
+    animation:open 0.5s 1 forwards;
+    height:120px;
+}
+#add,#remove{
+    height:60px;
+    width:60px;
+    border-radius:30px;
+    border-color:transparent;
+    position:relative;
+    background-color:#444;
+    color:#fff;
+    font-size:30px;
+}
+#remove{
+    background-color:#f66;
+}
+h1,h3{
+    width:100%;
+    text-align:center;
+    margin:10px auto;
+}
+h3 .fa-info{
+    margin:10px;
+    border:1px solid #fff;
+    height:20px;
+    width:20px;
+    border-radius:10px;
+    font-size:12px;
+    line-height:18px;
+    transform:translateY(-2px);
+    cursor: pointer;
 
+}
+
+form input{
+    color:#334;
+    width: 25%;
+    padding:15px;
+    margin:10px 10px;
+    text-align:center;
+    border:none;
+    border-color:transparent;
+    outline-color:#333;
+    border-radius:5px;
+    font-size:17px;
+    animation:result 0.6s 1;
+    position:relative;
+}
+form input::placeholder{
+    left:0;
+    transform-origin:0 0;
+    transition:all 0.3s;
+    position:absolute;
+    margin:auto 0;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+form input:hover::placeholder{ 
+    left:0px;
+    transform:scale(0.5)translateY(-15px);
+}
+.actions{
+    --pos:translateY(100%);
+    position:fixed;
+    bottom:0;
+    width:100vw;
+    display:flex;
+    height:70px;
+    justify-content:center;
+    align-items:center;
+    padding:10px;
+    background-color:#333;
+    z-index:1;
+    animation:open .5s 1 forwards;
+}
+form button{
+    width:25%;
+    margin:5px;
+    padding:10px 0px;
+    font-size:20px;
+    border-color:transparent;
+    border-radius:5px;
+    color:#fff;
+    background-color:#444;
+    box-shadow:2px 2px 3px #0004;
+    height:50px;
+    cursor: pointer;
+
+}
+.clear{
+    background-color:#f66;
+}
+.modal{
+    --pos:translateY(100%);
+    height:500px;
+    width:330px;
+    background-color:#333;
+    border-radius:10px;
+    padding:20px;
+    animation:open 0.4s 1 forwards;
+    box-shadow:15px 15px 15px #0002;
+}
+.modal p{
+    font-size:15px;
+    text-align:left;
+    text-wrap:balance;
+}
+.modal a{
+    color:#66c;
+}
+.modal-header{
+    display:flex;
+    justify-content:end;
+}
+.modal-header .close{
+    background-color:#f66;
+    width:20px;
+    height:20px;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor: pointer;
+}
+.modal-container{
+    position:fixed;
+    top:0;
+    left:0;
+    height:100vh;
+    width:100vw;
+    background-color:#0009;
+    align-items:center;
+    justify-content:center;
+    z-index:2;
+    display:none;
+    backdrop-filter:blur(10px);
+    animation:openModal 0.4s 1 forwards;
+}
+@keyframes result{
+    0%{transform:sclae(0);}
+    30%{transform:scale(1.1);}
+    50%{transform:scale(0.9);}
+    70%{transform:scale(1.05);}
+    90%{transform:scale(0.95);}
+    100%{transform:scale(1);}
+}
+@keyframes close{
+    from{transform:scale(1);}
+    to{transform:scale(0);}
+}
+@keyframes openModal{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+@keyframes closeModal{
+    from{opacity:1;}
+    to{opacity:0;}
+}
+@keyframes open{
+    from{transform:var(--pos)}
+    to{transform:translateY(0);}
+}
